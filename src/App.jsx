@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import About from './components/About';
 import ThemeToggle from './components/ThemeToggle';
+import Background from './components/Background';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       {/* {theme toggle} */}
       <ThemeToggle />
       {/* {Background stuff} */}
+      <Background />
 
       <Navbar />
       <About />
