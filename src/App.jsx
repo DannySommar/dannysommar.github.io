@@ -6,13 +6,14 @@ import Background from './components/Background';
 function App() {
   return (
     <>
-      {/* {theme toggle} */}
       <ThemeToggle />
-      {/* {Background stuff} */}
+
       <Background />
 
       <Navbar />
-      <About />
+
+
+      {/* <About /> */}
 
 
       {/* {footer} */}
