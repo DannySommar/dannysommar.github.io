@@ -5,6 +5,24 @@
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
   --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --animate-fade-in: fade-in 0.7s ease-out forwards;
+  --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
+  --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
+  --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
+  --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 @layer base {
@@ -13,6 +31,7 @@
     --foreground: 222 47% 11%;
     --border: 214 32% 91%;
     --primary: 250 47% 60%;
+    --primary-foreground: 210 40% 98%;
   }
 
   .dark {
@@ -20,6 +39,7 @@
     --foreground: 213 31% 91%;
     --border: 217 33% 20%;
     --primary: 250 65% 65%;
+    --primary-foreground: 213 31% 91%;
   }
 
   * {
@@ -60,6 +80,12 @@
 @utility text-glow {
   @apply relative;
   text-shadow: 0 0 20px rgba(167, 139, 250, 0.8);
+}
+
+@utility cosmic-button {
+  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium 
+         transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
+         hover:scale-105 active:scale-95;
 }
 
 #root {
