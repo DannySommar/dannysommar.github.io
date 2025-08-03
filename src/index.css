@@ -7,6 +7,7 @@
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
   --color-card: hsl(var(--card));
+  --color-card-hover: hsl(var(--card-hover));
 
   --animate-fade-in: fade-in 0.7s ease-out forwards;
   --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
@@ -34,6 +35,7 @@
     --primary: 250 47% 60%;
     --primary-foreground: 210 40% 98%;
     --card: 0 0% 100%;
+    --card-hover: 210 40% 95%;
   }
 
   .dark {
@@ -43,6 +45,7 @@
     --primary: 250 65% 65%;
     --primary-foreground: 213 31% 91%;
     --card: 222 47% 8%;
+    --card-hover: 222 47% 12%;
   }
 
   * {

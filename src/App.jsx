@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection';
 import ThemeToggle from './components/ThemeToggle';
 import Background from './components/Background';
 import Footer from './components/Footer';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
 
       <main>
         <HeroSection />
+        <About />
+        <Projects />
       </main>
 
 
