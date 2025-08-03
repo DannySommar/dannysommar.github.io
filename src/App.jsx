@@ -3,6 +3,7 @@ import About from './components/About';
 import HeroSection from './components/HeroSection';
 import ThemeToggle from './components/ThemeToggle';
 import Background from './components/Background';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       </main>
 
 
-      {/* {footer} */}
+      <Footer />
     </div>
   )
 }
