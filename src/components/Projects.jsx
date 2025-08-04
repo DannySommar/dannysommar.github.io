@@ -33,9 +33,10 @@ const projects =[
 
 export default function Projects () {
     return (
-        <CardPanel id="projects" title="My Projects" highlightWord="My">
-            
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <CardPanel id="projects" title="My Projects" highlightWords="My">
+
+            {/* desktop nav */}
+            <div className='hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {projects.map((project) => (
                     <div key={project.id}
                         className="relative group rounded-xl overflow-hidden shadow-lg hover:shadow-primary/20 dark:hover:shadow-primary/30 transition-all duration-300 h-64"
@@ -62,6 +63,34 @@ export default function Projects () {
                 ))}
             </div>
 
+            {/* mobile nav */}
+
+            <div className='grid grid-cols-1 gap-8 md:hidden'>
+                {projects.map((project) => (
+                    <div key={project.id}
+                        className="relative group rounded-xl overflow-hidden shadow-lg hover:shadow-primary/20 dark:hover:shadow-primary/30 transition-all duration-300 h-64"
+                    >
+                        
+                        <img src={project.image} alt={`${project.title} thumbnail`} className="w-full h-full object-cover" />
+                        
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-100 transition-opacity duration-300" />
+                        
+                        <div className="absolute inset-0 p-4 flex flex-col justify-end opacity-100 transition-opacity duration-300">
+                            <h3 className="text-white font-bold text-xl mb-2">{project.title}</h3>
+                            <p className="text-gray-300 text-sm mb-4">{project.description}</p>
+                            
+                            <div className="flex justify-between items-center">
+                                <a className="text-primary hover:text-primary-foreground transition-colors"
+                                target="_blank"
+                                href={project.githubUrl}>
+                                    <Github className="w-5 h-5" />
+                                </a>
+                                <span className="text-xs text-gray-400">{project.tags}</span>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
 
 
             <div className="text-center mt-12">

@@ -2,7 +2,7 @@ import {cn} from '../lib/utils'
 
 const img = "/images/pfp.png"
 
-export default function CardPanel({ children, id, title, highlightWord }) {
+export default function CardPanel({ children, id, title, highlightWords }) {
   return (
     <section id={id} className="relative py-16 px-4 group bg-c">
       
@@ -22,7 +22,7 @@ export default function CardPanel({ children, id, title, highlightWord }) {
         <h2 className="text-3xl md:text-4xl font-bold mb-8">
           {title.split(' ').map((word, key) => (
             <span key={key}>
-              {word === highlightWord ? (<span className="text-primary">{word}</span>) : (word)}
+              {word === highlightWords ? (<span className="text-primary">{word}</span>) : (word)}
               {' '}
             </span>
           ))}
