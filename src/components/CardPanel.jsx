@@ -1,5 +1,7 @@
 import {cn} from '../lib/utils'
 
+const img = "/images/pfp.png"
+
 export default function CardPanel({ children, id, title, highlightWord }) {
   return (
     <section id={id} className="relative py-16 px-4 group bg-c">
@@ -10,6 +12,12 @@ export default function CardPanel({ children, id, title, highlightWord }) {
         "group-hover:shadow-primary/20 dark:group-hover:shadow-primary/30",
         "max-w-5xl mx-auto text-left"
       )}>
+        { id==="about" && (
+          <div className="absolute top-4 right-4 z-20 w-22 h-22 hover:scale-110 transition-transform">
+            <img className="w-full h-full rounded-full border-2 border-background shadow-sm hover:shadow-md hover:border-primary transition-all"
+              src={img} alt="Profile" />
+          </div>
+        )}
         
         <h2 className="text-3xl md:text-4xl font-bold mb-8">
           {title.split(' ').map((word, key) => (

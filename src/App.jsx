@@ -1,7 +1,6 @@
 import Navbar from './components/Navbar';
 import About from './components/About';
 import HeroSection from './components/HeroSection';
-import ThemeToggle from './components/ThemeToggle';
 import Background from './components/Background';
 import Footer from './components/Footer';
 import Projects from './components/Projects';
@@ -9,7 +8,7 @@ import Projects from './components/Projects';
 function App() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
 
       <Background />
 

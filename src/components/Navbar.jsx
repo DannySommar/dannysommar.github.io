@@ -1,7 +1,11 @@
-import { X, Menu } from "lucide-react"
+import { X, Menu, Download } from "lucide-react"
 import { useEffect, useState } from 'react';
 
 import {cn} from '../lib/utils'
+
+import ThemeToggle from './ThemeToggle';
+
+const resume = "/documents/resume.pdf"
 
 const navItems = [
     {name: "Home", href: "#hero"},
@@ -18,7 +22,7 @@ export default function Navbar () {
 
     useEffect(() => {
         function handleScroll() {
-            setIsScrolled(window.screenY > 10)
+            setIsScrolled(window.scrollY > 10)
         }
 
         window.addEventListener("scroll", handleScroll);
@@ -29,7 +33,7 @@ export default function Navbar () {
 
     return (
         <nav className={cn("fixed w-full z-40 transition-all duration-300", 
-            isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+            isScrolled ? "py-3 bg-background/50 backdrop-blur-md shadow-border shadow-xs" : "py-5"
         )} >
 
             <div className='container flex items-center justify-between'>
@@ -41,15 +45,33 @@ export default function Navbar () {
 
                 {/* desktop nav */}
                 <div className="hidden md:flex space-x-8">
-                    {navItems.map((item, key) => (
-                        <a
-                        key={key}
-                        href={item.href}
-                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                        >
-                        {item.name}
+                    <div className="bg-card border-1 border-border backdrop-blur-sm px-6 py-2 rounded-lg space-x-8">
+                        {navItems.map((item, key) => (
+                            <a
+                            key={key}
+                            href={item.href}
+                            className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                            >
+                            {item.name}
+                            </a>
+                        ))}
+                    </div>
+                    
+                    <div className="flex items-center gap-4">
+                        <a className={cn(
+                            "flex items-center gap-2 px-4 py-2 rounded-full",
+                            "bg-primary text-primary-foreground font-medium",
+                            "hover:bg-primary/90 transition-colors",
+                            "text-sm sm:text-base"
+                            )}
+                        href={resume}
+                        terget="_blank">
+                            <Download className="w-4 h-4" />
+                            View My CV
                         </a>
-                    ))}
+                        
+                        <ThemeToggle />
+                    </div>
                 </div>
 
                 
@@ -66,7 +88,7 @@ export default function Navbar () {
                     "transition-all duration-300 md:hidden",
                     isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                 )}>
-                    <div className="flex flex-col space-y-8 text-xl">
+                    <div className="flex flex-col space-y-8 text-xl items-center">
                         {navItems.map((item, key) => (
                             <a
                             key={key}
@@ -77,6 +99,8 @@ export default function Navbar () {
                             {item.name}
                             </a>
                         ))}
+
+                        <ThemeToggle />
                     </div>
                 </div>
 
