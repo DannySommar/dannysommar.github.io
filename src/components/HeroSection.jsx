@@ -12,7 +12,8 @@ export default function HeroSection () {
                     </h1>
 
                     <p className="text-lg mg:text-xl max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                        me is supere very kool trust
+                        I am a Software Engineering student at University of Glasgow, 
+                        currently searching for a year-long placement
                     </p>
 
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4">
