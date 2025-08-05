@@ -3,9 +3,14 @@ import {cn} from '../lib/utils'
 const img = "/images/pfp.png"
 
 export default function CardPanel({ children, id, title, highlightWords }) {
+  // need to false-chech because some sections might not have highlightwords, and that causes nothing to load without this.
+  const highlightArray = highlightWords 
+    ? highlightWords.split(' ') 
+    : [];
+
   return (
     <section id={id} className="relative py-16 px-4 group bg-c">
-      
+
       <div className={cn(
         "bg-card hover:bg-card-hover backdrop-blur-sm",
         "border border-border rounded-xl p-8 shadow-lg",
@@ -22,7 +27,7 @@ export default function CardPanel({ children, id, title, highlightWords }) {
         <h2 className="text-3xl md:text-4xl font-bold mb-8">
           {title.split(' ').map((word, key) => (
             <span key={key}>
-              {word === highlightWords ? (<span className="text-primary">{word}</span>) : (word)}
+              {highlightArray.includes(word) ? (<span className="text-primary">{word}</span>) : (word)}
               {' '}
             </span>
           ))}

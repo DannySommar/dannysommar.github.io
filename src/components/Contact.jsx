@@ -22,7 +22,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors"
+                  <a className="text-muted-foreground hover:text-primary transition-colors bg-card/50 p-0.5 rounded-md border md:bg-transparent md:p-0 md:border-0"
                     href="mailto:danny.sommar@gmail.com"
                   >
                     danny.sommar@gmail.com
