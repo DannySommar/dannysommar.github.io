@@ -22,7 +22,7 @@ export default function About() {
         </div>
         <br/>
         <p className="pt-2">
-          Currently seeking <span className="font-semibold">2025-2026 internship opportunities</span> (10-12 months) to grow as a developer and contribute to projects.
+          Currently seeking <span className="font-semibold">2026-2027 internship opportunities</span> (10-12 months) to grow as a developer and contribute to projects.
         </p>
       </div>
     </CardPanel>
