@@ -51,27 +51,16 @@
   * {
     @apply border-border;
   }
-  
+
+  /* Remove any existing scroll-behavior rules */
   html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 2rem;
+    scroll-behavior: auto; /* Disable default smooth scrolling */
+    scroll-padding-top: 2rem; /* Keep padding for fixed headers */
   }
 
-  @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    [id] {
-      scroll-margin-top: 2rem;
-      animation: smoothscroll 1s both;
-      animation-timeline: view();
-    }
-    
-    @keyframes smoothscroll {
-      from {
-        scroll-margin-top: 0;
-      }
-      to {
-        scroll-margin-top: 2rem;
-      }
-    }
+  /* Add this new utility class */
+  .smooth-scroll {
+    scroll-behavior: smooth;
   }
 
   body {
