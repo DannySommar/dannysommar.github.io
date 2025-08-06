@@ -51,9 +51,27 @@
   * {
     @apply border-border;
   }
-
+  
   html {
-    @apply scroll-smooth;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    [id] {
+      scroll-margin-top: 2rem;
+      animation: smoothscroll 1s both;
+      animation-timeline: view();
+    }
+    
+    @keyframes smoothscroll {
+      from {
+        scroll-margin-top: 0;
+      }
+      to {
+        scroll-margin-top: 2rem;
+      }
+    }
   }
 
   body {
