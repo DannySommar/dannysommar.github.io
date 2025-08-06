@@ -7,6 +7,7 @@ export const cn = (...inputs) => {
     return twMerge(clsx(inputs))
 }
 
+// I honestly don't care how thisworks.
 export function initSmoothScroll() {
   // Check if reduced motion is enabled
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

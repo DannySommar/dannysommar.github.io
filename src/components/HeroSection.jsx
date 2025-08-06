@@ -1,3 +1,4 @@
+import { ArrowBigDown, ArrowDown } from "lucide-react";
 
 
 export default function HeroSection () {
@@ -24,6 +25,12 @@ export default function HeroSection () {
 
                 </div>
 
+            </div>
+
+            
+            <div className="absolute bottom-8 flex flex-col items-center animate-bounce">
+                <span className="text-sm mb-2">Scroll</span>
+                <ArrowDown className="text-primary" />
             </div>
         </section>
     )

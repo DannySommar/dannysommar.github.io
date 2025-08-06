@@ -54,11 +54,11 @@
 
   /* Remove any existing scroll-behavior rules */
   html {
-    scroll-behavior: auto; /* Disable default smooth scrolling */
-    scroll-padding-top: 2rem; /* Keep padding for fixed headers */
+    scroll-behavior: auto;
+    scroll-padding-top: 2rem;
   }
 
-  /* Add this new utility class */
+  /* All this so that it scrolls correctly on mac */
   .smooth-scroll {
     scroll-behavior: smooth;
   }

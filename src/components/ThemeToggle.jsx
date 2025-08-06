@@ -37,6 +37,6 @@ export default function ThemeToggle() {
             "focus:outline-hidden"
         )}
         onClick={toggleTheme}>
-        {isDarkMode ? <Sun className="h-6 w-6 text-yellow-300"/> : <Moon className="h-6 w-6 text-blue-900"/>}
+        {isDarkMode ? <Sun className="h-7 w-7 text-yellow-300"/> : <Moon className="h-7 w-7 text-blue-900"/>}
     </button>
 }
