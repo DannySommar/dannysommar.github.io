@@ -1,6 +1,6 @@
 import {cn} from '../lib/utils'
 
-const img = "/images/pfp.png"
+const img = "/images/photo_work.jpg"
 
 export default function CardPanel({ children, id, title, highlightWords }) {
   // need to false-chech because some sections might not have highlightwords, and that causes nothing to load without this.
