@@ -12,14 +12,14 @@ const projects =[
         tags: ["Java"]
     },
 
-    {
-        id: 2,
-        title: "Picture classifier",
-        description: "Allows you to pass in images or a folder to be categorised with an OpenAI key. Currently under development.",
-        image: "/projects/image-categoriser.png",
-        githubUrl: "https://github.com/PavloMatveiev/Pictures-AI-Classifier",
-        tags: ["Python, AI"]
-    },
+    // {
+    //     id: 2,
+    //     title: "Picture classifier",
+    //     description: "Allows you to pass in images or a folder to be categorised with an OpenAI key. Currently under development.",
+    //     image: "/projects/image-categoriser.png",
+    //     githubUrl: "https://github.com/PavloMatveiev/Pictures-AI-Classifier",
+    //     tags: ["Python, AI"]
+    // },
 
     {
         id: 3,
@@ -28,6 +28,15 @@ const projects =[
         image: "/projects/adventure-game.png",
         githubUrl: "https://github.com/DannySommar/django_adventure_game",
         tags: ["Python, js, css, html, Django"]
+    },
+
+    {
+        id: 4,
+        title: "Poor mans social media",
+        description: "A full stack application where you can make posts, wrapped in Docker. Currently under development.",
+        image: "/projects/showcase-app-docker.png",
+        githubUrl: "https://github.com/DannySommar/showcase-app-docker",
+        tags: ["Express.js, React, postgreSQL, Docker"]
     },
 ]
 

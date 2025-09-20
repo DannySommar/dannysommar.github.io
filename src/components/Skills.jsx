@@ -11,8 +11,9 @@ const skills = [
   { name: "Python", source: "University" },
   { name: "Java", source: "University" },
   { name: "C++", source: "learncpp.com" },
-  { name: "TailwindCSS", source: "Scrimba" },
+  { name: "Docker", source: "Many hours of YouTube" },
   { name: "Django", source: "University" },
+  { name: "PostgreSQL", source: "these progress bars are stupid" },
 ];
 
 export default function Skills() {
