@@ -53,9 +53,7 @@ export default function Projects () {
                         
                         <img src={project.image} alt={`${project.title} thumbnail`} className="w-full h-full object-cover" />
                         
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        
-                        <div className="absolute inset-0 p-4 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-4 flex flex-col justify-end opacity-0 hover:opacity-100 transition-opacity duration-300">
                             <h3 className="text-white font-bold text-xl mb-2">{project.title}</h3>
                             <p className="text-gray-300 text-sm mb-4">{project.description}</p>
                             
