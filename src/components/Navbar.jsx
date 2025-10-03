@@ -5,7 +5,7 @@ import {cn} from '../lib/utils'
 
 import ThemeToggle from './ThemeToggle';
 
-const resume = "/documents/resume.pdf"
+const resume = "/documents/Danny_CV.docx"
 
 const navItems = [
     {name: "Home", href: "#hero"},
